@@ -1,3 +1,6 @@
+Microservicios · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,170 +9,345 @@
 <title>Arquitectura de Microservicios</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">Desarrollo Web</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="api.html">Web APIs</a></li>
-<li class="nav-item"><a class="nav-link active" href="microservicios.html">Microservicios</a></li>
-<li class="nav-item"><a class="nav-link" href="desarrollo-api.html">Desarrollo API</a></li>
-<li class="nav-item"><a class="nav-link" href="contenedores.html">Contenedores</a></li>
-<li class="nav-item"><a class="nav-link" href="nube.html">Nube</a></li>
-<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-code-slash me-2"></i>Desarrollo Web
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="api.html"><i class="bi bi-plug me-1"></i>Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link active" href="microservicios.html"><i class="bi bi-diagram-3 me-1"></i>Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="desarrollo-api.html"><i class="bi bi-terminal me-1"></i>Desarrollo API</a></li>
+        <li class="nav-item"><a class="nav-link" href="contenedores.html"><i class="bi bi-box me-1"></i>Contenedores</a></li>
+        <li class="nav-item"><a class="nav-link" href="nube.html"><i class="bi bi-cloud me-1"></i>Nube</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<main>
-<section class="container py-5 mt-5">
-
-<h1 class="mb-4">2. Arquitectura de Microservicios</h1>
-
-<div class="row justify-content-center my-4">
-  <div class="col-md-6 text-center">
-    <img src="img/micro.png" 
-         class="img-fluid rounded shadow" 
-         alt="Arquitectura de Microservicios">
-    <p class="text-muted mt-2">
-      Figura 1. Representación de arquitectura basada en microservicios.
-    </p>
+<!-- HERO -->
+<div class="hero mt-5">
+  <div>
+    <h1 class="titulo-hero display-5">
+      <i class="bi bi-diagram-3-fill me-3"></i>Arquitectura de Microservicios
+    </h1>
+    <p class="mt-3">Servicios independientes, escalables y orientados a la nube</p>
+    <a href="#contenido" class="btn btn-outline-light mt-2">
+      <i class="bi bi-arrow-down-circle me-2"></i>Explorar contenido
+    </a>
   </div>
 </div>
 
-<h3>2.1 Definición</h3>
-<p>
-La arquitectura de microservicios es un enfoque de diseño de software en el que una aplicación se divide en pequeños servicios independientes que se comunican entre sí mediante APIs.
-</p>
+<main id="contenido">
+  <section class="container py-5">
+    <div class="row g-4">
 
-<h3 class="mt-4">2.2 Características Principales</h3>
-<ul>
-<li>Servicios independientes y autónomos</li>
-<li>Despliegue independiente</li>
-<li>Comunicación mediante APIs REST</li>
-<li>Escalabilidad individual</li>
-<li>Alta tolerancia a fallos</li>
-</ul>
+      <!-- SIDEBAR -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
+          <div class="card-header bg-dark text-white">
+            <i class="bi bi-list-ul me-2"></i>Contenido
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#def" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.1 Definición</a></li>
+            <li class="list-group-item"><a href="#caracteristicas" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.2 Características</a></li>
+            <li class="list-group-item"><a href="#comparacion" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.3 Comparación</a></li>
+            <li class="list-group-item"><a href="#ventajas" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.4 Ventajas</a></li>
+            <li class="list-group-item"><a href="#industria" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>En la Industria</a></li>
+            <li class="list-group-item"><a href="#desafios" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.5 Desafíos</a></li>
+            <li class="list-group-item"><a href="#nube" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>2.6 Nube y Contenedores</a></li>
+          </ul>
+        </div>
+      </div>
 
-<h3 class="mt-4">2.3 Comparación con Arquitectura Monolítica</h3>
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="col-lg-9">
 
-<table class="table table-bordered table-striped">
-<thead class="table-dark">
-<tr>
-<th>Aspecto</th>
-<th>Monolítica</th>
-<th>Microservicios</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Escalabilidad</td>
-<td>Se escala todo el sistema</td>
-<td>Se escala cada servicio</td>
-</tr>
-<tr>
-<td>Mantenimiento</td>
-<td>Más complejo en sistemas grandes</td>
-<td>Más sencillo por modularidad</td>
-</tr>
-<tr>
-<td>Despliegue</td>
-<td>Un solo paquete</td>
-<td>Despliegue independiente</td>
-</tr>
-</tbody>
-</table>
+        <!-- Título e imagen -->
+        <h2 class="mb-1"><i class="bi bi-diagram-3 me-2 text-secondary"></i>2. Arquitectura de Microservicios</h2>
+        <hr class="mb-4">
 
-<h3 class="mt-4">2.4 Ventajas</h3>
-<ul>
-<li>Mayor flexibilidad tecnológica</li>
-<li>Mejor resiliencia</li>
-<li>Facilidad para equipos distribuidos</li>
-</ul>
+        <div class="row justify-content-center my-4">
+          <div class="col-md-8 text-center">
+            <img src="img/micro.png"
+                 class="img-fluid rounded shadow"
+                 alt="Arquitectura de Microservicios">
+            <p class="text-muted mt-2 small">
+              <i class="bi bi-image me-1"></i>Figura 1. Representación de arquitectura basada en microservicios.
+            </p>
+          </div>
+        </div>
 
-<hr class="my-5">
+        <hr class="my-5">
 
-<h3 class="mb-4 text-center">
-<i class="bi bi-building text-primary me-2"></i>
-Microservicios en la Industria
-</h3>
+        <!-- 2.1 Definición -->
+        <div id="def">
+          <h4><i class="bi bi-info-circle me-2 text-secondary"></i>2.1 Definición</h4>
+          <p>La arquitectura de microservicios es un enfoque de diseño de software en el que una aplicación se divide en pequeños servicios independientes que se comunican entre sí mediante APIs.</p>
+        </div>
 
-<p class="text-center mb-5">
-Grandes empresas tecnológicas impulsan el uso de arquitecturas de microservicios 
-para el desarrollo de aplicaciones modernas, escalables y distribuidas.
-</p>
+        <hr class="my-5">
 
-<div class="row">
+        <!-- 2.2 Características -->
+        <div id="caracteristicas">
+          <h4><i class="bi bi-list-check me-2 text-secondary"></i>2.2 Características Principales</h4>
 
-<!-- IBM -->
-<div class="col-md-4 mb-4">
-<div class="card shadow-sm h-100 text-center border-0">
-<div class="card-body">
-<i class="bi bi-cpu-fill text-primary fs-1"></i>
-<h5 class="mt-3">IBM</h5>
-<p>
-Promueve arquitecturas basadas en microservicios para soluciones 
-empresariales, especialmente en entornos híbridos y multinube.
-</p>
-</div>
-</div>
-</div>
+          <div class="row g-3 mt-1">
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-puzzle fs-2 text-secondary mb-2"></i>
+                  <h6>Independencia</h6>
+                  <p class="small text-muted mb-0">Servicios independientes y autónomos entre sí.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-rocket fs-2 text-secondary mb-2"></i>
+                  <h6>Despliegue independiente</h6>
+                  <p class="small text-muted mb-0">Cada servicio se despliega de forma separada.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-plug fs-2 text-secondary mb-2"></i>
+                  <h6>Comunicación REST</h6>
+                  <p class="small text-muted mb-0">Interacción mediante APIs REST estándar.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-arrows-fullscreen fs-2 text-secondary mb-2"></i>
+                  <h6>Escalabilidad individual</h6>
+                  <p class="small text-muted mb-0">Se escala solo el servicio que lo necesita.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-shield-check fs-2 text-secondary mb-2"></i>
+                  <h6>Tolerancia a fallos</h6>
+                  <p class="small text-muted mb-0">Alta resiliencia ante errores en un servicio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- AWS -->
-<div class="col-md-4 mb-4">
-<div class="card shadow-sm h-100 text-center border-0">
-<div class="card-body">
-<i class="bi bi-cloud-fill text-primary fs-1"></i>
-<h5 class="mt-3">Amazon Web Services (AWS)</h5>
-<p>
-Ofrece servicios como ECS y EKS que permiten desplegar 
-microservicios en contenedores de forma escalable y segura.
-</p>
-</div>
-</div>
-</div>
+        <hr class="my-5">
 
-<!-- Intel -->
-<div class="col-md-4 mb-4">
-<div class="card shadow-sm h-100 text-center border-0">
-<div class="card-body">
-<i class="bi bi-motherboard-fill text-primary fs-1"></i>
-<h5 class="mt-3">Intel</h5>
-<p>
-Desarrolla tecnologías de infraestructura que optimizan 
-el rendimiento de aplicaciones distribuidas y arquitecturas modernas.
-</p>
-</div>
-</div>
-</div>
+        <!-- 2.3 Comparación -->
+        <div id="comparacion">
+          <h4><i class="bi bi-arrow-left-right me-2 text-secondary"></i>2.3 Comparación con Arquitectura Monolítica</h4>
 
-</div> 
+          <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th><i class="bi bi-tag me-1"></i>Aspecto</th>
+                <th><i class="bi bi-box me-1"></i>Monolítica</th>
+                <th><i class="bi bi-diagram-3 me-1"></i>Microservicios</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="bi bi-arrows-fullscreen me-1 text-secondary"></i>Escalabilidad</td>
+                <td><span class="badge bg-danger">Se escala todo el sistema</span></td>
+                <td><span class="badge bg-success">Se escala cada servicio</span></td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-tools me-1 text-secondary"></i>Mantenimiento</td>
+                <td><span class="badge bg-danger">Más complejo en sistemas grandes</span></td>
+                <td><span class="badge bg-success">Más sencillo por modularidad</span></td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-rocket me-1 text-secondary"></i>Despliegue</td>
+                <td><span class="badge bg-warning text-dark">Un solo paquete</span></td>
+                <td><span class="badge bg-success">Despliegue independiente</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<h3 class="mt-4">2.5 Desafíos</h3>
-<ul>
-<li>Mayor complejidad en la comunicación</li>
-<li>Gestión de múltiples servicios</li>
-<li>Monitoreo distribuido</li>
-</ul>
+        <hr class="my-5">
 
-<h3 class="mt-4">2.6 Relación con Contenedores y Nube</h3>
-<p>
-Los microservicios suelen implementarse dentro de contenedores como Docker y desplegarse en plataformas de nube, lo que facilita su escalabilidad y disponibilidad.
-</p>
+        <!-- 2.4 Ventajas -->
+        <div id="ventajas">
+          <h4><i class="bi bi-stars me-2 text-secondary"></i>2.4 Ventajas</h4>
 
-</section>
+          <div class="row g-3 mt-1">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-sliders fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Flexibilidad tecnológica</h6>
+                    <p class="small text-muted mb-0">Cada servicio puede usar el stack tecnológico más adecuado.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-shield-check fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Mejor resiliencia</h6>
+                    <p class="small text-muted mb-0">El fallo de un servicio no afecta a los demás.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-people fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Equipos distribuidos</h6>
+                    <p class="small text-muted mb-0">Facilita el trabajo de múltiples equipos en paralelo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Industria -->
+        <div id="industria">
+          <h4 class="text-center mb-2">
+            <i class="bi bi-building me-2 text-secondary"></i>Microservicios en la Industria
+          </h4>
+          <p class="text-center text-muted mb-4">
+            Grandes empresas tecnológicas impulsan el uso de arquitecturas de microservicios para el desarrollo de aplicaciones modernas, escalables y distribuidas.
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-cpu-fill fs-1 text-secondary"></i>
+                  <h5 class="mt-3">IBM</h5>
+                  <p>Promueve arquitecturas basadas en microservicios para soluciones empresariales, especialmente en entornos híbridos y multinube.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-cloud-fill fs-1 text-secondary"></i>
+                  <h5 class="mt-3">Amazon Web Services</h5>
+                  <p>Ofrece servicios como ECS y EKS que permiten desplegar microservicios en contenedores de forma escalable y segura.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow-sm h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-motherboard-fill fs-1 text-secondary"></i>
+                  <h5 class="mt-3">Intel</h5>
+                  <p>Desarrolla tecnologías de infraestructura que optimizan el rendimiento de aplicaciones distribuidas y arquitecturas modernas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 2.5 Desafíos -->
+        <div id="desafios">
+          <h4><i class="bi bi-exclamation-triangle me-2 text-secondary"></i>2.5 Desafíos</h4>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-signpost-split fs-2 text-secondary mb-2"></i>
+                  <h6>Comunicación compleja</h6>
+                  <p class="small text-muted mb-0">Mayor complejidad en la comunicación entre servicios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-layers fs-2 text-secondary mb-2"></i>
+                  <h6>Gestión de servicios</h6>
+                  <p class="small text-muted mb-0">Administrar múltiples servicios simultáneamente.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-activity fs-2 text-secondary mb-2"></i>
+                  <h6>Monitoreo distribuido</h6>
+                  <p class="small text-muted mb-0">Rastrear el estado y rendimiento de cada servicio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 2.6 Nube y Contenedores -->
+        <div id="nube">
+          <h4><i class="bi bi-cloud-arrow-up me-2 text-secondary"></i>2.6 Relación con Contenedores y Nube</h4>
+          <p>Los microservicios suelen implementarse dentro de contenedores como Docker y desplegarse en plataformas de nube, lo que facilita su escalabilidad y disponibilidad.</p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-box-seam fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Docker</h6>
+                    <p class="small text-muted mb-0">Empaqueta cada microservicio en un contenedor aislado y portable.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-cloud fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Plataformas en la nube</h6>
+                    <p class="small text-muted mb-0">Facilitan el despliegue, escalado y disponibilidad global de los servicios.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-9 -->
+    </div><!-- /row -->
+  </section>
 </main>
 
 <footer class="bg-dark text-white text-center p-3">
-© 2026 - Desarrollo Web
+  <i class="bi bi-code-slash me-2"></i>© 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

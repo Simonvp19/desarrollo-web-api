@@ -1,3 +1,6 @@
+Contenedores · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,118 +9,349 @@
 <title>Contenedores y Virtualización</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">Desarrollo Web</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="api.html">Web APIs</a></li>
-<li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
-<li class="nav-item"><a class="nav-link" href="desarrollo-api.html">Desarrollo API</a></li>
-<li class="nav-item"><a class="nav-link active" href="contenedores.html">Contenedores</a></li>
-<li class="nav-item"><a class="nav-link" href="nube.html">Nube</a></li>
-<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-code-slash me-2"></i>Desarrollo Web
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="api.html"><i class="bi bi-plug me-1"></i>Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link" href="microservicios.html"><i class="bi bi-diagram-3 me-1"></i>Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="desarrollo-api.html"><i class="bi bi-terminal me-1"></i>Desarrollo API</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contenedores.html"><i class="bi bi-box me-1"></i>Contenedores</a></li>
+        <li class="nav-item"><a class="nav-link" href="nube.html"><i class="bi bi-cloud me-1"></i>Nube</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<main>
-<section class="container py-5 mt-5">
-
-<h1 class="mb-4">4. Contenedores y Virtualización</h1>
-
-<h3>4.1 ¿Qué es un contenedor?</h3>
-<p>
-Un contenedor es una unidad ligera y portable que incluye una aplicación y todas sus dependencias necesarias para ejecutarse de manera consistente en cualquier entorno.
-</p>
-
-<h3 class="mt-4">4.2 Diferencia entre Máquina Virtual y Contenedor</h3>
-
-<table class="table table-bordered table-striped">
-<thead class="table-dark">
-<tr>
-<th>Aspecto</th>
-<th>Máquina Virtual</th>
-<th>Contenedor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sistema Operativo</td>
-<td>Incluye SO completo</td>
-<td>Comparte el SO del host</td>
-</tr>
-<tr>
-<td>Uso de recursos</td>
-<td>Mayor consumo</td>
-<td>Ligero y eficiente</td>
-</tr>
-<tr>
-<td>Tiempo de arranque</td>
-<td>Lento</td>
-<td>Rápido</td>
-</tr>
-</tbody>
-</table>
-
-<h3 class="mt-4">4.3 Docker como herramienta principal</h3>
-<p>
-Docker es la plataforma más utilizada para la creación y gestión de contenedores. Permite empaquetar aplicaciones en imágenes que pueden ejecutarse en cualquier entorno.
-</p>
-
-<h3 class="mt-4">4.4 Componentes de Docker</h3>
-<ul>
-<li>Docker Client</li>
-<li>Docker Daemon</li>
-<li>Docker Registry</li>
-<li>Imágenes</li>
-<li>Contenedores</li>
-</ul>
-
-<h3 class="mt-4">4.5 Ventajas del uso de contenedores</h3>
-<ul>
-<li>Portabilidad entre entornos</li>
-<li>Consistencia en despliegues</li>
-<li>Escalabilidad rápida</li>
-<li>Optimización de recursos</li>
-</ul>
-
-<h3 class="mt-4">4.6 Relación con Microservicios</h3>
-<p>
-Los microservicios suelen desplegarse dentro de contenedores, lo que permite que cada servicio funcione de manera independiente y escalable.
-</p>
-<h3 class="mt-5 text-center">Video Explicativo: Introducción a Docker</h3>
-
-<div class="d-flex justify-content-center my-4">
-<div class="ratio ratio-16x9 w-75">
-<iframe 
-src="https://www.youtube.com/embed/fqMOX6JJhGo"
-title="Introducción a Docker en Español"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>
-</div>
+<!-- HERO -->
+<div class="hero mt-5">
+  <div>
+    <h1 class="titulo-hero display-5">
+      <i class="bi bi-box-fill me-3"></i>Contenedores y Virtualización
+    </h1>
+    <p class="mt-3">Tecnología ligera y portable para despliegues modernos con Docker</p>
+    <a href="#contenido" class="btn btn-outline-light mt-2">
+      <i class="bi bi-arrow-down-circle me-2"></i>Explorar contenido
+    </a>
+  </div>
 </div>
 
-<p class="text-center text-muted">
-El video anterior complementa la explicación teórica mostrando el funcionamiento práctico de los contenedores Docker.
-</p>
+<main id="contenido">
+  <section class="container py-5">
+    <div class="row g-4">
 
-</section>
+      <!-- SIDEBAR -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
+          <div class="card-header bg-dark text-white">
+            <i class="bi bi-list-ul me-2"></i>Contenido
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#def" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.1 ¿Qué es un contenedor?</a></li>
+            <li class="list-group-item"><a href="#comparacion" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.2 VM vs Contenedor</a></li>
+            <li class="list-group-item"><a href="#docker" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.3 Docker</a></li>
+            <li class="list-group-item"><a href="#componentes" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.4 Componentes</a></li>
+            <li class="list-group-item"><a href="#ventajas" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.5 Ventajas</a></li>
+            <li class="list-group-item"><a href="#microservicios" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>4.6 Microservicios</a></li>
+            <li class="list-group-item"><a href="#video" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>Video explicativo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="col-lg-9">
+
+        <h2 class="mb-1"><i class="bi bi-box me-2 text-secondary"></i>4. Contenedores y Virtualización</h2>
+        <hr class="mb-4">
+
+        <!-- 4.1 Definición -->
+        <div id="def">
+          <h4><i class="bi bi-info-circle me-2 text-secondary"></i>4.1 ¿Qué es un contenedor?</h4>
+          <p>Un contenedor es una unidad ligera y portable que incluye una aplicación y todas sus dependencias necesarias para ejecutarse de manera consistente en cualquier entorno.</p>
+
+          <div class="row g-3 my-3">
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-feather fs-2 text-secondary mb-2"></i>
+                  <h6>Ligero</h6>
+                  <p class="small text-muted mb-0">Comparte el kernel del sistema operativo anfitrión.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-arrow-left-right fs-2 text-secondary mb-2"></i>
+                  <h6>Portable</h6>
+                  <p class="small text-muted mb-0">Se ejecuta de forma idéntica en cualquier entorno.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-boxes fs-2 text-secondary mb-2"></i>
+                  <h6>Aislado</h6>
+                  <p class="small text-muted mb-0">Cada contenedor opera de forma independiente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 4.2 Comparación -->
+        <div id="comparacion">
+          <h4><i class="bi bi-arrow-left-right me-2 text-secondary"></i>4.2 Diferencia entre Máquina Virtual y Contenedor</h4>
+
+          <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th><i class="bi bi-tag me-1"></i>Aspecto</th>
+                <th><i class="bi bi-hdd-stack me-1"></i>Máquina Virtual</th>
+                <th><i class="bi bi-box me-1"></i>Contenedor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="bi bi-laptop me-1 text-secondary"></i>Sistema Operativo</td>
+                <td><span class="badge bg-danger">Incluye SO completo</span></td>
+                <td><span class="badge bg-success">Comparte el SO del host</span></td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-cpu me-1 text-secondary"></i>Uso de recursos</td>
+                <td><span class="badge bg-danger">Mayor consumo</span></td>
+                <td><span class="badge bg-success">Ligero y eficiente</span></td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-stopwatch me-1 text-secondary"></i>Tiempo de arranque</td>
+                <td><span class="badge bg-warning text-dark">Lento</span></td>
+                <td><span class="badge bg-success">Rápido</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 4.3 Docker -->
+        <div id="docker">
+          <h4><i class="bi bi-box-seam me-2 text-secondary"></i>4.3 Docker como herramienta principal</h4>
+          <p>Docker es la plataforma más utilizada para la creación y gestión de contenedores. Permite empaquetar aplicaciones en imágenes que pueden ejecutarse en cualquier entorno.</p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-file-earmark-zip fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Imágenes Docker</h6>
+                    <p class="small text-muted mb-0">Plantillas inmutables con todo lo necesario para ejecutar una aplicación.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-play-circle fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Contenedores en ejecución</h6>
+                    <p class="small text-muted mb-0">Instancias activas de una imagen Docker corriendo en el host.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 4.4 Componentes -->
+        <div id="componentes">
+          <h4><i class="bi bi-puzzle me-2 text-secondary"></i>4.4 Componentes de Docker</h4>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-terminal fs-2 text-secondary mb-2"></i>
+                  <h6>Docker Client</h6>
+                  <p class="small text-muted mb-0">Interfaz de línea de comandos para interactuar con Docker.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-gear-wide-connected fs-2 text-secondary mb-2"></i>
+                  <h6>Docker Daemon</h6>
+                  <p class="small text-muted mb-0">Proceso en segundo plano que gestiona contenedores e imágenes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-cloud-download fs-2 text-secondary mb-2"></i>
+                  <h6>Docker Registry</h6>
+                  <p class="small text-muted mb-0">Repositorio para almacenar y distribuir imágenes Docker.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-file-earmark-zip fs-2 text-secondary mb-2"></i>
+                  <h6>Imágenes</h6>
+                  <p class="small text-muted mb-0">Plantillas de solo lectura para crear contenedores.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-box fs-2 text-secondary mb-2"></i>
+                  <h6>Contenedores</h6>
+                  <p class="small text-muted mb-0">Instancias ejecutables e independientes de una imagen.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 4.5 Ventajas -->
+        <div id="ventajas">
+          <h4><i class="bi bi-stars me-2 text-secondary"></i>4.5 Ventajas del uso de contenedores</h4>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-arrow-left-right fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Portabilidad entre entornos</h6>
+                    <p class="small text-muted mb-0">Funciona igual en desarrollo, pruebas y producción.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-check2-all fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Consistencia en despliegues</h6>
+                    <p class="small text-muted mb-0">Elimina el problema de "funciona en mi máquina".</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-arrows-fullscreen fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Escalabilidad rápida</h6>
+                    <p class="small text-muted mb-0">Nuevos contenedores se levantan en segundos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-speedometer2 fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Optimización de recursos</h6>
+                    <p class="small text-muted mb-0">Menor consumo de CPU y memoria respecto a VMs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 4.6 Microservicios -->
+        <div id="microservicios">
+          <h4><i class="bi bi-diagram-3 me-2 text-secondary"></i>4.6 Relación con Microservicios</h4>
+          <p>Los microservicios suelen desplegarse dentro de contenedores, lo que permite que cada servicio funcione de manera independiente y escalable.</p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-puzzle fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Un servicio, un contenedor</h6>
+                    <p class="small text-muted mb-0">Cada microservicio vive en su propio contenedor aislado.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-shield-check fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Independencia y resiliencia</h6>
+                    <p class="small text-muted mb-0">El fallo de un contenedor no afecta a los demás servicios.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Video -->
+        <div id="video">
+          <h4 class="text-center mb-2">
+            <i class="bi bi-play-circle me-2 text-secondary"></i>Video Explicativo: Introducción a Docker
+          </h4>
+          <p class="text-center text-muted mb-4">Complemento visual sobre el funcionamiento práctico de los contenedores Docker.</p>
+
+          <div class="d-flex justify-content-center my-4">
+            <div class="ratio ratio-16x9 w-75">
+              <iframe
+                src="https://www.youtube.com/embed/fqMOX6JJhGo"
+                title="Introducción a Docker en Español"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-9 -->
+    </div><!-- /row -->
+  </section>
 </main>
 
 <footer class="bg-dark text-white text-center p-3">
-© 2026 - Desarrollo Web
+  <i class="bi bi-code-slash me-2"></i>© 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,3 +1,6 @@
+Contacto · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,94 +9,192 @@
 <title>Contacto</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-<main class="flex-fill">
+<body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">Desarrollo Web</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="api.html">Web APIs</a></li>
-<li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
-<li class="nav-item"><a class="nav-link" href="desarrollo-api.html">Desarrollo API</a></li>
-<li class="nav-item"><a class="nav-link" href="contenedores.html">Contenedores</a></li>
-<li class="nav-item"><a class="nav-link" href="nube.html">Nube</a></li>
-<li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-code-slash me-2"></i>Desarrollo Web
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="api.html"><i class="bi bi-plug me-1"></i>Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link" href="microservicios.html"><i class="bi bi-diagram-3 me-1"></i>Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="desarrollo-api.html"><i class="bi bi-terminal me-1"></i>Desarrollo API</a></li>
+        <li class="nav-item"><a class="nav-link" href="contenedores.html"><i class="bi bi-box me-1"></i>Contenedores</a></li>
+        <li class="nav-item"><a class="nav-link" href="nube.html"><i class="bi bi-cloud me-1"></i>Nube</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<section class="container py-5 mt-5">
-<h1 class="mb-4 text-center">Formulario de Contacto</h1>
-
-<form id="formulario" class="needs-validation" novalidate>
-
-<div class="row">
-<div class="col-md-6 mb-3">
-<label>Nombre completo</label>
-<input type="text" class="form-control" id="nombre" required>
-<div class="invalid-feedback">Ingrese su nombre.</div>
+<!-- HERO -->
+<div class="hero mt-5">
+  <div>
+    <h1 class="titulo-hero display-5">
+      <i class="bi bi-envelope-fill me-3"></i>Contacto
+    </h1>
+    <p class="mt-3">¿Tienes alguna duda o comentario? Escríbenos</p>
+    <a href="#formulario" class="btn btn-outline-light mt-2">
+      <i class="bi bi-arrow-down-circle me-2"></i>Ir al formulario
+    </a>
+  </div>
 </div>
 
-<div class="col-md-6 mb-3">
-<label>Correo electrónico</label>
-<input type="email" class="form-control" id="correo" required>
-<div class="invalid-feedback">Ingrese un correo válido.</div>
-</div>
+<main>
+  <section class="container py-5" id="formulario">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
 
-<div class="col-md-6 mb-3">
-<label>Teléfono</label>
-<input type="text" class="form-control" id="telefono" required>
-<div class="invalid-feedback">Ingrese su teléfono.</div>
-</div>
+        <h2 class="text-center mb-1">
+          <i class="bi bi-send me-2 text-secondary"></i>Formulario de Contacto
+        </h2>
+        <p class="text-center text-muted mb-4">Completa los campos y nos pondremos en contacto contigo.</p>
 
-<div class="col-md-6 mb-3">
-<label>Asunto</label>
-<input type="text" class="form-control" id="asunto" required>
-<div class="invalid-feedback">Ingrese el asunto.</div>
-</div>
+        <form id="contactForm" class="needs-validation" novalidate>
 
-<div class="col-12 mb-3">
-<label>Mensaje</label>
-<textarea class="form-control" id="mensaje" rows="4" required></textarea>
-<div class="invalid-feedback">Ingrese un mensaje.</div>
-</div>
+          <div class="row g-3">
 
-<button class="btn btn-primary w-100">Enviar</button>
-</div>
+            <!-- Nombre -->
+            <div class="col-md-6">
+              <label class="form-label">
+                <i class="bi bi-person me-1 text-secondary"></i>Nombre completo
+              </label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+              <div class="invalid-feedback">Ingrese su nombre.</div>
+            </div>
 
-</form>
+            <!-- Correo -->
+            <div class="col-md-6">
+              <label class="form-label">
+                <i class="bi bi-envelope me-1 text-secondary"></i>Correo electrónico
+              </label>
+              <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+              <div class="invalid-feedback">Ingrese un correo válido.</div>
+            </div>
 
-</section>
+            <!-- Teléfono -->
+            <div class="col-md-6">
+              <label class="form-label">
+                <i class="bi bi-telephone me-1 text-secondary"></i>Teléfono
+              </label>
+              <input type="text" class="form-control" id="telefono" placeholder="+52 000 000 0000" required>
+              <div class="invalid-feedback">Ingrese su teléfono.</div>
+            </div>
+
+            <!-- Asunto -->
+            <div class="col-md-6">
+              <label class="form-label">
+                <i class="bi bi-chat-left-text me-1 text-secondary"></i>Asunto
+              </label>
+              <input type="text" class="form-control" id="asunto" placeholder="¿De qué trata tu mensaje?" required>
+              <div class="invalid-feedback">Ingrese el asunto.</div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="col-12">
+              <label class="form-label">
+                <i class="bi bi-pencil-square me-1 text-secondary"></i>Mensaje
+              </label>
+              <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+              <div class="invalid-feedback">Ingrese un mensaje.</div>
+            </div>
+
+            <!-- Botón enviar -->
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark w-100">
+                <i class="bi bi-send me-2"></i>Enviar mensaje
+              </button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- Alerta de éxito (oculta por defecto) -->
+        <div id="alertaExito" class="alert alert-success mt-4 d-none" role="alert">
+          <i class="bi bi-check-circle-fill me-2"></i>
+          <strong>¡Mensaje enviado!</strong> Nos pondremos en contacto contigo pronto.
+        </div>
+
+      </div>
+
+      <!-- Info de contacto lateral -->
+      <div class="col-lg-4 offset-lg-1 mt-4 mt-lg-0">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-header bg-dark text-white">
+            <i class="bi bi-info-circle me-2"></i>Información de contacto
+          </div>
+          <div class="card-body d-flex flex-column gap-4 py-4">
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-geo-alt-fill fs-4 text-secondary flex-shrink-0"></i>
+              <div>
+                <h6 class="mb-1">Ubicación</h6>
+                <p class="small text-muted mb-0">México</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-envelope-fill fs-4 text-secondary flex-shrink-0"></i>
+              <div>
+                <h6 class="mb-1">Correo</h6>
+                <p class="small text-muted mb-0">simonvp146hotmail.com</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-telephone-fill fs-4 text-secondary flex-shrink-0"></i>
+              <div>
+                <h6 class="mb-1">Teléfono</h6>
+                <p class="small text-muted mb-0">+52 449 112 5511</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3">
+              <i class="bi bi-clock-fill fs-4 text-secondary flex-shrink-0"></i>
+              <div>
+                <h6 class="mb-1">Horario de atención</h6>
+                <p class="small text-muted mb-0">Lunes a Viernes, 9:00 – 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
 
 <footer class="bg-dark text-white text-center p-3">
-© 2026 - Desarrollo Web
+  <i class="bi bi-code-slash me-2"></i>© 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 (() => {
-'use strict'
-const forms = document.querySelectorAll('.needs-validation')
-Array.from(forms).forEach(form => {
-form.addEventListener('submit', event => {
-if (!form.checkValidity()) {
-event.preventDefault()
-event.stopPropagation()
-}
-form.classList.add('was-validated')
-}, false)
-})
-})()
+  'use strict';
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    if (form.checkValidity()) {
+      form.classList.remove('was-validated');
+      form.reset();
+      document.getElementById('alertaExito').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('alertaExito').classList.add('d-none');
+      }, 5000);
+    } else {
+      form.classList.add('was-validated');
+    }
+  });
+})();
 </script>
 
 </body>

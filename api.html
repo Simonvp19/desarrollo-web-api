@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,283 +7,456 @@
 <title>Tecnologías de Web APIs</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-<div class="container">
-<a class="navbar-brand fw-bold" href="index.html">Desarrollo Web</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="menu">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link active" href="api.html">Web APIs</a></li>
-<li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
-<li class="nav-item"><a class="nav-link" href="desarrollo-api.html">Desarrollo API</a></li>
-<li class="nav-item"><a class="nav-link" href="contenedores.html">Contenedores</a></li>
-<li class="nav-item"><a class="nav-link" href="nube.html">Nube</a></li>
-<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-code-slash me-2"></i>Desarrollo Web
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="api.html"><i class="bi bi-plug me-1"></i>Web APIs</a></li>
+        <li class="nav-item"><a class="nav-link" href="microservicios.html"><i class="bi bi-diagram-3 me-1"></i>Microservicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="desarrollo-api.html"><i class="bi bi-terminal me-1"></i>Desarrollo API</a></li>
+        <li class="nav-item"><a class="nav-link" href="contenedores.html"><i class="bi bi-box me-1"></i>Contenedores</a></li>
+        <li class="nav-item"><a class="nav-link" href="nube.html"><i class="bi bi-cloud me-1"></i>Nube</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<main>
-<section class="container py-5 mt-5">
+<!-- HERO -->
+<div class="hero mt-5">
+  <div>
+    <h1 class="titulo-hero display-5">
+      <i class="bi bi-plug-fill me-3"></i>Tecnologías de Web APIs
+    </h1>
+    <p class="mt-3">Definición, arquitectura REST, seguridad y más</p>
+    <a href="#contenido" class="btn btn-outline-light mt-2">
+      <i class="bi bi-arrow-down-circle me-2"></i>Explorar contenido
+    </a>
+  </div>
+</div>
 
-<h1 class="mb-4">1. Tecnologías de Web APIs</h1>
+<main id="contenido">
+  <section class="container py-5">
+    <div class="row g-4">
 
-<h3>1.1 Definición de API</h3>
-<p>
-Una API (Application Programming Interface) es un conjunto de reglas y protocolos que permiten la comunicación entre diferentes sistemas de software. Funciona como intermediaria para facilitar el intercambio estructurado de datos.
-</p>
-<p>
-Las Web APIs utilizan el protocolo HTTP para enviar y recibir solicitudes entre cliente y servidor, generalmente en formato JSON.
-</p>
+      <!-- SIDEBAR: tabla de contenidos -->
+      <div class="col-lg-3 d-none d-lg-block">
+        <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
+          <div class="card-header bg-dark text-white">
+            <i class="bi bi-list-ul me-2"></i>Contenido
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#def" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.1 Definición de API</a></li>
+            <li class="list-group-item"><a href="#http" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.2 API y HTTP</a></li>
+            <li class="list-group-item"><a href="#funcionamiento" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.3 Funcionamiento</a></li>
+            <li class="list-group-item"><a href="#codigos" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>Códigos de Estado</a></li>
+            <li class="list-group-item"><a href="#rest" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.4 Arquitectura REST</a></li>
+            <li class="list-group-item"><a href="#tecnologias" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.5 Tecnologías</a></li>
+            <li class="list-group-item"><a href="#seguridad" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.6 Seguridad</a></li>
+            <li class="list-group-item"><a href="#ventajas" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>Ventajas</a></li>
+            <li class="list-group-item"><a href="#aplicaciones" class="text-decoration-none text-dark"><i class="bi bi-chevron-right me-1 text-secondary"></i>1.7 Aplicaciones reales</a></li>
+          </ul>
+        </div>
+      </div>
 
-<hr class="my-5">
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="col-lg-9">
 
-<h3>
-<i class="bi bi-globe text-primary me-2"></i>
-1.2Relación entre API y HTTP
-</h3>
+        <!-- 1.1 Definición -->
+        <div id="def">
+          <h2 class="mb-1"><i class="bi bi-book me-2 text-secondary"></i>1. Tecnologías de Web APIs</h2>
+          <hr class="mb-4">
+          <h4><i class="bi bi-info-circle me-2 text-secondary"></i>1.1 Definición de API</h4>
+          <p>Una API (Application Programming Interface) es un conjunto de reglas y protocolos que permiten la comunicación entre diferentes sistemas de software. Funciona como intermediaria para facilitar el intercambio estructurado de datos.</p>
+          <p>Las Web APIs utilizan el protocolo HTTP para enviar y recibir solicitudes entre cliente y servidor, generalmente en formato JSON.</p>
 
-<p>
-Las Web APIs generalmente utilizan el protocolo HTTP 
-(HyperText Transfer Protocol) para intercambiar información 
-entre cliente y servidor.
-</p>
+          <div class="row g-3 my-3">
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-arrow-left-right fs-2 text-secondary mb-2"></i>
+                  <h6 class="card-title">Comunicación</h6>
+                  <p class="card-text small text-muted">Facilita el intercambio de datos entre sistemas distintos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-globe fs-2 text-secondary mb-2"></i>
+                  <h6 class="card-title">HTTP</h6>
+                  <p class="card-text small text-muted">Usa el protocolo HTTP como base de comunicación.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-filetype-json fs-2 text-secondary mb-2"></i>
+                  <h6 class="card-title">JSON</h6>
+                  <p class="card-text small text-muted">Los datos se intercambian en formato JSON.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<p>
-HTTP define métodos que permiten realizar operaciones sobre recursos:
-</p>
+        <hr class="my-5">
 
-<table class="table table-bordered mt-3">
-<thead class="table-dark">
-<tr>
-<th>Método</th>
-<th>Función</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td>Obtener información</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>Enviar o crear información</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>Actualizar datos existentes</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>Eliminar información</td>
-</tr>
-</tbody>
-</table>
+        <!-- 1.2 HTTP -->
+        <div id="http">
+          <h4><i class="bi bi-globe me-2 text-secondary"></i>1.2 Relación entre API y HTTP</h4>
+          <p>Las Web APIs generalmente utilizan el protocolo HTTP (HyperText Transfer Protocol) para intercambiar información entre cliente y servidor.</p>
+          <p>HTTP define métodos que permiten realizar operaciones sobre recursos:</p>
 
-<p>
-Gracias a HTTP, las APIs pueden funcionar de manera estandarizada 
-a través de internet.
-</p>
+          <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th><i class="bi bi-tag me-1"></i>Método</th>
+                <th><i class="bi bi-lightning me-1"></i>Función</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-success">GET</span></td><td>Obtener información</td></tr>
+              <tr><td><span class="badge bg-primary">POST</span></td><td>Enviar o crear información</td></tr>
+              <tr><td><span class="badge bg-warning text-dark">PUT</span></td><td>Actualizar datos existentes</td></tr>
+              <tr><td><span class="badge bg-danger">DELETE</span></td><td>Eliminar información</td></tr>
+            </tbody>
+          </table>
+          <p>Gracias a HTTP, las APIs pueden funcionar de manera estandarizada a través de internet.</p>
+        </div>
 
-<h3 class="mt-4">1.3 Funcionamiento de una Web API</h3>
-<p>
-Las Web APIs operan mediante solicitudes HTTP que permiten realizar acciones sobre recursos específicos en un servidor.
-</p>
+        <hr class="my-5">
 
-<table class="table table-bordered table-striped mt-3">
-<thead class="table-dark">
-<tr>
-<th>Método HTTP</th>
-<th>Descripción Técnica</th>
-<th>Uso Común</th>
-<th>Ejemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GET</td>
-<td>Solicita información sin modificar datos.</td>
-<td>Consultar registros</td>
-<td>/api/usuarios</td>
-</tr>
-<tr>
-<td>POST</td>
-<td>Envía datos para crear un recurso nuevo.</td>
-<td>Registrar usuario</td>
-<td>/api/usuarios</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>Actualiza información existente.</td>
-<td>Modificar usuario</td>
-<td>/api/usuarios/1</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>Elimina un recurso del sistema.</td>
-<td>Borrar registro</td>
-<td>/api/usuarios/1</td>
-</tr>
-</tbody>
-</table>
+        <!-- 1.3 Funcionamiento -->
+        <div id="funcionamiento">
+          <h4><i class="bi bi-gear me-2 text-secondary"></i>1.3 Funcionamiento de una Web API</h4>
+          <p>Las Web APIs operan mediante solicitudes HTTP que permiten realizar acciones sobre recursos específicos en un servidor.</p>
 
-<h4 class="mt-5">
-<i class="bi bi-exclamation-circle text-primary me-2"></i>
-Códigos de Estado HTTP
-</h4>
+          <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th>Método HTTP</th>
+                <th>Descripción Técnica</th>
+                <th>Uso Común</th>
+                <th>Ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge bg-success">GET</span></td>
+                <td>Solicita información sin modificar datos.</td>
+                <td>Consultar registros</td>
+                <td><code>/api/usuarios</code></td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-primary">POST</span></td>
+                <td>Envía datos para crear un recurso nuevo.</td>
+                <td>Registrar usuario</td>
+                <td><code>/api/usuarios</code></td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-warning text-dark">PUT</span></td>
+                <td>Actualiza información existente.</td>
+                <td>Modificar usuario</td>
+                <td><code>/api/usuarios/1</code></td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-danger">DELETE</span></td>
+                <td>Elimina un recurso del sistema.</td>
+                <td>Borrar registro</td>
+                <td><code>/api/usuarios/1</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<p>
-Además de los métodos, HTTP utiliza códigos de estado para indicar el 
-resultado de una solicitud realizada por el cliente.
-Estos códigos permiten saber si la operación fue exitosa o si ocurrió algún error.
-</p>
+        <hr class="my-5">
 
-<table class="table table-bordered mt-3">
-<thead class="table-dark">
-<tr>
-<th>Código</th>
-<th>Significado</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>200 OK</td>
-<td>Éxito</td>
-<td>La solicitud fue procesada correctamente.</td>
-</tr>
-<tr>
-<td>201 Created</td>
-<td>Creado</td>
-<td>El recurso fue creado exitosamente.</td>
-</tr>
-<tr>
-<td>400 Bad Request</td>
-<td>Error del cliente</td>
-<td>La solicitud contiene datos incorrectos.</td>
-</tr>
-<tr>
-<td>401 Unauthorized</td>
-<td>No autorizado</td>
-<td>Se requiere autenticación.</td>
-</tr>
-<tr>
-<td>404 Not Found</td>
-<td>No encontrado</td>
-<td>El recurso solicitado no existe.</td>
-</tr>
-<tr>
-<td>500 Internal Server Error</td>
-<td>Error del servidor</td>
-<td>Ocurrió un problema en el servidor.</td>
-</tr>
-</tbody>
-</table>
+        <!-- Códigos de estado -->
+        <div id="codigos">
+          <h4><i class="bi bi-exclamation-circle me-2 text-secondary"></i>Códigos de Estado HTTP</h4>
+          <p>HTTP utiliza códigos de estado para indicar el resultado de una solicitud. Permiten saber si la operación fue exitosa o si ocurrió algún error.</p>
 
-<p>
-Los códigos de estado son fundamentales en el desarrollo de Web APIs, 
-ya que permiten a los desarrolladores manejar adecuadamente 
-las respuestas del servidor y mejorar la experiencia del usuario.
-</p>
-<ul>
-<li><strong>1xx:</strong> Respuestas informativas.</li>
-<li><strong>2xx:</strong> Solicitudes exitosas.</li>
-<li><strong>3xx:</strong> Redirecciones.</li>
-<li><strong>4xx:</strong> Errores del cliente.</li>
-<li><strong>5xx:</strong> Errores del servidor.</li>
-</ul>
+          <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th>Código</th>
+                <th>Significado</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge bg-success">200 OK</span></td><td>Éxito</td><td>La solicitud fue procesada correctamente.</td></tr>
+              <tr><td><span class="badge bg-success">201 Created</span></td><td>Creado</td><td>El recurso fue creado exitosamente.</td></tr>
+              <tr><td><span class="badge bg-danger">400 Bad Request</span></td><td>Error del cliente</td><td>La solicitud contiene datos incorrectos.</td></tr>
+              <tr><td><span class="badge bg-danger">401 Unauthorized</span></td><td>No autorizado</td><td>Se requiere autenticación.</td></tr>
+              <tr><td><span class="badge bg-danger">404 Not Found</span></td><td>No encontrado</td><td>El recurso solicitado no existe.</td></tr>
+              <tr><td><span class="badge bg-dark">500 Server Error</span></td><td>Error del servidor</td><td>Ocurrió un problema en el servidor.</td></tr>
+            </tbody>
+          </table>
 
-<h3 class="mt-4">1.4 Arquitectura REST</h3>
-<p>
-La arquitectura REST (Representational State Transfer) es el modelo más utilizado en el desarrollo de Web APIs modernas.
-</p>
-<ul>
-<li>Uso de protocolos estándar como HTTP</li>
-<li>Comunicación sin estado (stateless)</li>
-<li>Identificación de recursos mediante URLs</li>
-<li>Uso consistente de métodos HTTP</li>
-<li>Representación de datos en formato JSON</li>
-</ul>
+          <p>Los códigos de estado son fundamentales para manejar respuestas del servidor correctamente.</p>
 
-<h3 class="mt-4">1.5 Tecnologías para desarrollar APIs</h3>
+          <div class="row g-2 mt-2">
+            <div class="col-md-4 col-sm-6">
+              <div class="alert alert-secondary py-2 mb-0"><i class="bi bi-info-circle me-1"></i><strong>1xx</strong> Informativas</div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="alert alert-success py-2 mb-0"><i class="bi bi-check-circle me-1"></i><strong>2xx</strong> Exitosas</div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="alert alert-warning py-2 mb-0"><i class="bi bi-arrow-repeat me-1"></i><strong>3xx</strong> Redirecciones</div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="alert alert-danger py-2 mb-0"><i class="bi bi-person-x me-1"></i><strong>4xx</strong> Error del cliente</div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="alert alert-dark py-2 mb-0 text-white"><i class="bi bi-server me-1"></i><strong>5xx</strong> Error del servidor</div>
+            </div>
+          </div>
+        </div>
 
-<table class="table table-bordered table-striped mt-3">
-<thead class="table-dark">
-<tr>
-<th>Lenguaje</th>
-<th>Framework</th>
-<th>Aplicación Común</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JavaScript</td>
-<td>Node.js / Express</td>
-<td>Aplicaciones web modernas</td>
-</tr>
-<tr>
-<td>Java</td>
-<td>Spring Boot</td>
-<td>Sistemas empresariales</td>
-</tr>
-<tr>
-<td>Python</td>
-<td>Flask / Django</td>
-<td>Servicios ligeros</td>
-</tr>
-<tr>
-<td>C#</td>
-<td>ASP.NET Core</td>
-<td>Aplicaciones corporativas</td>
-</tr>
-</tbody>
-</table>
+        <hr class="my-5">
 
-<h3 class="mt-4">1.6 Seguridad en Web APIs</h3>
-<p>
-La seguridad en las APIs es fundamental para proteger los datos intercambiados. Entre los mecanismos más utilizados se encuentran:
-</p>
-<ul>
-<li>Autenticación mediante JWT (JSON Web Token)</li>
-<li>Protocolo OAuth 2.0</li>
-<li>Cifrado de datos mediante HTTPS</li>
-<li>Control de acceso basado en roles</li>
-</ul>
+        <!-- 1.4 REST -->
+        <div id="rest">
+          <h4><i class="bi bi-diagram-2 me-2 text-secondary"></i>1.4 Arquitectura REST</h4>
+          <p>La arquitectura REST (Representational State Transfer) es el modelo más utilizado en el desarrollo de Web APIs modernas.</p>
 
-<h3 class="mt-4">
-<i class="bi bi-stars text-primary me-2"></i>
-Ventajas de las Web APIs
-</h3>
-<ul>
-<li>Interoperabilidad entre sistemas</li>
-<li>Escalabilidad</li>
-<li>Reutilización de servicios</li>
-<li>Facilidad de mantenimiento</li>
-<li>Integración con aplicaciones móviles y web</li>
-</ul>
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <i class="bi bi-globe2 fs-4 text-secondary me-2"></i><strong>Protocolo estándar HTTP</strong>
+                  <p class="small text-muted mt-1 mb-0">Comunicación basada en métodos HTTP ampliamente adoptados.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <i class="bi bi-slash-circle fs-4 text-secondary me-2"></i><strong>Sin estado (Stateless)</strong>
+                  <p class="small text-muted mt-1 mb-0">Cada solicitud contiene toda la información necesaria.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <i class="bi bi-link-45deg fs-4 text-secondary me-2"></i><strong>Recursos por URL</strong>
+                  <p class="small text-muted mt-1 mb-0">Cada recurso se identifica mediante una URL única.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <i class="bi bi-filetype-json fs-4 text-secondary me-2"></i><strong>Datos en JSON</strong>
+                  <p class="small text-muted mt-1 mb-0">Representación de recursos en formato JSON estándar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<h3 class="mt-4">1.8 Aplicaciones reales</h3>
-<p>
-Las APIs son utilizadas en múltiples plataformas digitales como Google Maps, PayPal, WhatsApp Business e Instagram, permitiendo la integración de servicios externos dentro de aplicaciones web y móviles.
-</p>
+        <hr class="my-5">
 
+        <!-- 1.5 Tecnologías -->
+        <div id="tecnologias">
+          <h4><i class="bi bi-cpu me-2 text-secondary"></i>1.5 Tecnologías para desarrollar APIs</h4>
 
-</section>
+          <table class="table table-bordered table-striped mt-3">
+            <thead class="table-dark">
+              <tr>
+                <th><i class="bi bi-code me-1"></i>Lenguaje</th>
+                <th><i class="bi bi-layers me-1"></i>Framework</th>
+                <th><i class="bi bi-briefcase me-1"></i>Aplicación Común</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><i class="bi bi-filetype-js me-1 text-warning"></i>JavaScript</td><td>Node.js / Express</td><td>Aplicaciones web modernas</td></tr>
+              <tr><td><i class="bi bi-cup-hot me-1 text-danger"></i>Java</td><td>Spring Boot</td><td>Sistemas empresariales</td></tr>
+              <tr><td><i class="bi bi-filetype-py me-1 text-primary"></i>Python</td><td>Flask / Django</td><td>Servicios ligeros</td></tr>
+              <tr><td><i class="bi bi-microsoft me-1 text-info"></i>C#</td><td>ASP.NET Core</td><td>Aplicaciones corporativas</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 1.6 Seguridad -->
+        <div id="seguridad">
+          <h4><i class="bi bi-shield-lock me-2 text-secondary"></i>1.6 Seguridad en Web APIs</h4>
+          <p>La seguridad en las APIs es fundamental para proteger los datos intercambiados. Entre los mecanismos más utilizados se encuentran:</p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-key fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">JWT (JSON Web Token)</h6>
+                    <p class="small text-muted mb-0">Autenticación segura mediante tokens firmados digitalmente.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-person-check fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">OAuth 2.0</h6>
+                    <p class="small text-muted mb-0">Protocolo de autorización estándar en la industria.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-lock fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">HTTPS</h6>
+                    <p class="small text-muted mb-0">Cifrado de datos en tránsito mediante TLS/SSL.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body d-flex align-items-start gap-3">
+                  <i class="bi bi-people fs-3 text-secondary flex-shrink-0"></i>
+                  <div>
+                    <h6 class="mb-1">Control de roles</h6>
+                    <p class="small text-muted mb-0">Acceso basado en roles y permisos de usuario.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Ventajas -->
+        <div id="ventajas">
+          <h4><i class="bi bi-stars me-2 text-secondary"></i>Ventajas de las Web APIs</h4>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-4 col-sm-6">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-plug fs-2 text-secondary mb-2"></i>
+                  <h6>Interoperabilidad</h6>
+                  <p class="small text-muted mb-0">Conexión entre sistemas heterogéneos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-arrows-fullscreen fs-2 text-secondary mb-2"></i>
+                  <h6>Escalabilidad</h6>
+                  <p class="small text-muted mb-0">Crece según las necesidades del sistema.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-recycle fs-2 text-secondary mb-2"></i>
+                  <h6>Reutilización</h6>
+                  <p class="small text-muted mb-0">Servicios compartidos entre proyectos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-tools fs-2 text-secondary mb-2"></i>
+                  <h6>Mantenimiento</h6>
+                  <p class="small text-muted mb-0">Más fácil de mantener y actualizar.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-phone fs-2 text-secondary mb-2"></i>
+                  <h6>Integración</h6>
+                  <p class="small text-muted mb-0">Compatible con apps móviles y web.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- 1.7 Aplicaciones reales -->
+        <div id="aplicaciones">
+          <h4><i class="bi bi-building me-2 text-secondary"></i>1.7 Aplicaciones reales</h4>
+          <p>Las APIs son utilizadas en múltiples plataformas digitales, permitiendo la integración de servicios externos dentro de aplicaciones web y móviles.</p>
+
+          <div class="row g-3 mt-1">
+            <div class="col-6 col-md-3">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-geo-alt fs-2 text-secondary mb-2"></i>
+                  <h6 class="small">Google Maps</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-credit-card fs-2 text-secondary mb-2"></i>
+                  <h6 class="small">PayPal</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-chat-dots fs-2 text-secondary mb-2"></i>
+                  <h6 class="small">WhatsApp Business</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="card text-center h-100">
+                <div class="card-body">
+                  <i class="bi bi-instagram fs-2 text-secondary mb-2"></i>
+                  <h6 class="small">Instagram</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /col-lg-9 -->
+    </div><!-- /row -->
+  </section>
 </main>
 
 <footer class="bg-dark text-white text-center p-3">
-© 2026 - Desarrollo Web
+  <i class="bi bi-code-slash me-2"></i>© 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-</html>
