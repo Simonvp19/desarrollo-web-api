@@ -35,6 +35,11 @@
 
 <h1 class="mb-4">3. Proceso de Desarrollo de una Web API</h1>
 
+<p>
+El desarrollo de una Web API requiere una metodología estructurada que permita garantizar escalabilidad, seguridad y mantenibilidad. 
+A continuación, se describen las etapas fundamentales del proceso.
+</p>
+
 <div class="accordion" id="accordionAPI">
 
 <div class="accordion-item">
@@ -45,8 +50,18 @@
 </h2>
 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionAPI">
 <div class="accordion-body">
-En esta fase se identifican las necesidades del sistema, los recursos que se expondrán y los consumidores de la API. 
-Se definen casos de uso, tipo de datos y restricciones de seguridad.
+En esta etapa se identifican los objetivos del sistema y los recursos que serán expuestos mediante la API. 
+Se definen los tipos de usuarios que consumirán el servicio, los datos que se intercambiarán y las reglas de negocio.
+
+También se determinan aspectos como:
+<ul>
+<li>Tipo de autenticación requerida</li>
+<li>Restricciones de acceso</li>
+<li>Volumen estimado de solicitudes</li>
+<li>Requerimientos de rendimiento</li>
+</ul>
+
+Un análisis adecuado evita rediseños posteriores y mejora la arquitectura general del sistema.
 </div>
 </div>
 </div>
@@ -54,13 +69,22 @@ Se definen casos de uso, tipo de datos y restricciones de seguridad.
 <div class="accordion-item">
 <h2 class="accordion-header">
 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-2. Diseño de Arquitectura
+2. Diseño de la Arquitectura
 </button>
 </h2>
 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionAPI">
 <div class="accordion-body">
-Se determina si la API será RESTful, los endpoints, los métodos HTTP y el modelo de datos.
-También se define el esquema de autenticación (JWT, OAuth).
+Se define la estructura de la API bajo principios RESTful, estableciendo los endpoints, métodos HTTP y estructura de datos.
+
+En esta fase se diseña:
+<ul>
+<li>Definición clara de rutas (ej. /api/usuarios)</li>
+<li>Uso correcto de métodos HTTP (GET, POST, PUT, DELETE)</li>
+<li>Modelo de datos y relaciones</li>
+<li>Estrategia de versionamiento (v1, v2)</li>
+</ul>
+
+Un diseño adecuado facilita la escalabilidad y la integración con otros sistemas.
 </div>
 </div>
 </div>
@@ -73,8 +97,18 @@ También se define el esquema de autenticación (JWT, OAuth).
 </h2>
 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionAPI">
 <div class="accordion-body">
-Se desarrolla el código utilizando frameworks como Express, Spring Boot o ASP.NET.
-Se conectan bases de datos y se implementa la lógica del negocio.
+Se desarrolla el código utilizando frameworks especializados como Express (Node.js), Spring Boot (Java) o ASP.NET Core (C#).
+
+Durante la implementación se:
+<ul>
+<li>Configura el servidor</li>
+<li>Implementan controladores</li>
+<li>Conectan bases de datos</li>
+<li>Validan entradas de usuario</li>
+<li>Manejan excepciones</li>
+</ul>
+
+Es importante aplicar buenas prácticas como separación de capas (controlador, servicio, repositorio).
 </div>
 </div>
 </div>
@@ -82,13 +116,22 @@ Se conectan bases de datos y se implementa la lógica del negocio.
 <div class="accordion-item">
 <h2 class="accordion-header">
 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-4. Pruebas
+4. Pruebas y Validación
 </button>
 </h2>
 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionAPI">
 <div class="accordion-body">
-Se realizan pruebas funcionales y de seguridad mediante herramientas como Postman.
-Se valida el manejo de errores y tiempos de respuesta.
+Se realizan pruebas funcionales y de seguridad utilizando herramientas como Postman o Swagger.
+
+Se validan:
+<ul>
+<li>Códigos de estado HTTP correctos (200, 201, 404, 500)</li>
+<li>Integridad de datos</li>
+<li>Tiempo de respuesta</li>
+<li>Manejo adecuado de errores</li>
+</ul>
+
+También pueden realizarse pruebas automatizadas para garantizar estabilidad continua.
 </div>
 </div>
 </div>
@@ -96,13 +139,45 @@ Se valida el manejo de errores y tiempos de respuesta.
 <div class="accordion-item">
 <h2 class="accordion-header">
 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-5. Despliegue
+5. Documentación
 </button>
 </h2>
 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionAPI">
 <div class="accordion-body">
-La API se publica en servidores locales o en la nube (AWS, Azure, Google Cloud).
-Se configura monitoreo y mantenimiento continuo.
+Una API debe estar correctamente documentada para facilitar su consumo por otros desarrolladores.
+
+Se documenta:
+<ul>
+<li>Descripción de endpoints</li>
+<li>Parámetros requeridos</li>
+<li>Ejemplos de solicitud y respuesta</li>
+<li>Errores posibles</li>
+</ul>
+
+Herramientas como Swagger permiten generar documentación interactiva.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+6. Despliegue y Mantenimiento
+</button>
+</h2>
+<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionAPI">
+<div class="accordion-body">
+La API se despliega en entornos locales o en plataformas cloud como AWS, Azure o Google Cloud.
+
+Posteriormente se implementan:
+<ul>
+<li>Monitoreo de rendimiento</li>
+<li>Actualizaciones de seguridad</li>
+<li>Escalabilidad automática</li>
+<li>Control de versiones</li>
+</ul>
+
+El mantenimiento continuo garantiza disponibilidad y confiabilidad del servicio.
 </div>
 </div>
 </div>
