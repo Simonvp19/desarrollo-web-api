@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desarrollo de una Web API</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">Desarrollo Web</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="api.html">Web APIs</a></li>
+<li class="nav-item"><a class="nav-link" href="microservicios.html">Microservicios</a></li>
+<li class="nav-item"><a class="nav-link active" href="desarrollo-api.html">Desarrollo API</a></li>
+<li class="nav-item"><a class="nav-link" href="contenedores.html">Contenedores</a></li>
+<li class="nav-item"><a class="nav-link" href="nube.html">Nube</a></li>
+<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<main class="flex-fill">
+
+<section class="container py-5 mt-5">
+<h1 class="mb-4">3. Desarrollo de una Web API</h1>
+
+<p>
+El desarrollo de una Web API requiere una planificación estructurada, el seguimiento de estándares y la implementación de buenas prácticas de seguridad, documentación y versionamiento.
+</p>
+
+<h3 class="mt-4">Recomendaciones Fundamentales</h3>
+<ol>
+<li>Definir claramente los objetivos y usuarios de la API.</li>
+<li>Seguir estándares REST y utilizar formatos como JSON.</li>
+<li>Documentar exhaustivamente la API.</li>
+<li>Implementar mecanismos de autenticación y autorización.</li>
+<li>Versionar la API para mantener compatibilidad.</li>
+</ol>
+
+<h3 class="mt-4">Proceso de Desarrollo</h3>
+
+<div class="accordion" id="procesoAPI">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#paso1">
+1. Análisis de Requerimientos
+</button>
+</h2>
+<div id="paso1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Identificación de requisitos funcionales y no funcionales, casos de uso y datos a manipular.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#paso2">
+2. Planificación
+</button>
+</h2>
+<div id="paso2" class="accordion-collapse collapse">
+<div class="accordion-body">
+Definición de objetivos, tiempos, costos y metodología de desarrollo.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#paso3">
+3. Diseño de Endpoints
+</button>
+</h2>
+<div id="paso3" class="accordion-collapse collapse">
+<div class="accordion-body">
+Definir rutas como /posts, /comments y asociarlas a métodos GET, POST, PUT y DELETE.
+</div>
+</div>
+</div>
+
+</div>
+
+<h3 class="mt-4">Implementación y Pruebas</h3>
+<p>
+La implementación puede realizarse mediante frameworks como Express.js o Flask. Posteriormente se ejecutan pruebas unitarias y de integración para validar el correcto funcionamiento.
+</p>
+
+<h3 class="mt-4">Documentación y Despliegue</h3>
+<p>
+Herramientas como Swagger y Postman permiten generar documentación automática. El despliegue se realiza en entornos productivos asegurando disponibilidad y escalabilidad.
+</p>
+
+<h3 class="mt-4">Monitoreo y Mantenimiento</h3>
+<p>
+Se deben implementar sistemas de monitoreo continuo para detectar fallos y garantizar el rendimiento óptimo de la API.
+</p>
+
+</section>
+
+</main>
+
+<footer class="bg-dark text-white text-center p-3 mt-auto">
+© 2026 - Desarrollo Web
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>s
