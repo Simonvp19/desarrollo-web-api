@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manejo de Contenedores</title>
+<title>Contenedores y Virtualización</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-<main class="flex-fill">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
 <div class="container">
@@ -31,39 +30,78 @@
 </div>
 </nav>
 
+<main>
 <section class="container py-5 mt-5">
-<h1 class="mb-4">4. Manejo de Contenedores</h1>
 
-<h3>¿Qué es un contenedor?</h3>
+<h1 class="mb-4">4. Contenedores y Virtualización</h1>
+
+<h3>4.1 ¿Qué es un contenedor?</h3>
 <p>
-Un contenedor es una unidad ligera y portátil que empaqueta una aplicación junto con todas sus dependencias, garantizando que se ejecute de manera uniforme en distintos entornos.
+Un contenedor es una unidad ligera y portable que incluye una aplicación y todas sus dependencias necesarias para ejecutarse de manera consistente en cualquier entorno.
 </p>
 
-<h3 class="mt-4">Docker</h3>
+<h3 class="mt-4">4.2 Diferencia entre Máquina Virtual y Contenedor</h3>
+
+<table class="table table-bordered table-striped">
+<thead class="table-dark">
+<tr>
+<th>Aspecto</th>
+<th>Máquina Virtual</th>
+<th>Contenedor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sistema Operativo</td>
+<td>Incluye SO completo</td>
+<td>Comparte el SO del host</td>
+</tr>
+<tr>
+<td>Uso de recursos</td>
+<td>Mayor consumo</td>
+<td>Ligero y eficiente</td>
+</tr>
+<tr>
+<td>Tiempo de arranque</td>
+<td>Lento</td>
+<td>Rápido</td>
+</tr>
+</tbody>
+</table>
+
+<h3 class="mt-4">4.3 Docker como herramienta principal</h3>
 <p>
-Docker es una plataforma que permite crear, distribuir y ejecutar contenedores. Facilita el desarrollo, pruebas y despliegue continuo de aplicaciones.
+Docker es la plataforma más utilizada para la creación y gestión de contenedores. Permite empaquetar aplicaciones en imágenes que pueden ejecutarse en cualquier entorno.
 </p>
 
-<h3 class="mt-4">Kubernetes</h3>
+<h3 class="mt-4">4.4 Componentes de Docker</h3>
+<ul>
+<li>Docker Client</li>
+<li>Docker Daemon</li>
+<li>Docker Registry</li>
+<li>Imágenes</li>
+<li>Contenedores</li>
+</ul>
+
+<h3 class="mt-4">4.5 Ventajas del uso de contenedores</h3>
+<ul>
+<li>Portabilidad entre entornos</li>
+<li>Consistencia en despliegues</li>
+<li>Escalabilidad rápida</li>
+<li>Optimización de recursos</li>
+</ul>
+
+<h3 class="mt-4">4.6 Relación con Microservicios</h3>
 <p>
-Kubernetes es un sistema de orquestación que administra múltiples contenedores, permitiendo escalabilidad automática, balanceo de carga y alta disponibilidad.
+Los microservicios suelen desplegarse dentro de contenedores, lo que permite que cada servicio funcione de manera independiente y escalable.
 </p>
+<h3 class="mt-5 text-center">Video Explicativo: Introducción a Docker</h3>
 
-<h3 class="mt-4">Relación con Microservicios</h3>
-<p>
-Cada microservicio puede ejecutarse dentro de un contenedor independiente, lo que permite su despliegue y escalabilidad de forma autónoma en entornos de nube.
-</p>
-
-</section>
-
-<div class="container text-center my-5">
-<h3 class="mb-4">Video Explicativo en Español</h3>
-
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center my-4">
 <div class="ratio ratio-16x9 w-75">
 <iframe 
-src="https://www.youtube.com/embed/4Dko5W96WHg"
-title="Video explicativo"
+src="https://www.youtube.com/embed/fqMOX6JJhGo"
+title="Introducción a Docker en Español"
 frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
@@ -71,13 +109,17 @@ allowfullscreen>
 </div>
 </div>
 
-</div>
+<p class="text-center text-muted">
+El video anterior complementa la explicación teórica mostrando el funcionamiento práctico de los contenedores Docker.
+</p>
+
+</section>
+</main>
 
 <footer class="bg-dark text-white text-center p-3">
 © 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="d-flex flex-column min-vh-100">
-<main class="flex-fill">
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
 <div class="container">
@@ -31,14 +30,17 @@
 </div>
 </nav>
 
+<main>
 <section class="container py-5 mt-5">
+
 <h1 class="mb-4">5. Desarrollo de Aplicaciones en la Nube</h1>
 
+<h3>5.1 Concepto de Computación en la Nube</h3>
 <p>
-La computación en la nube es un modelo de prestación de servicios tecnológicos que permite el acceso bajo demanda a recursos informáticos como servidores, almacenamiento, bases de datos y plataformas de desarrollo a través de Internet.
+La computación en la nube es un modelo que permite el acceso bajo demanda a recursos tecnológicos a través de Internet.
 </p>
 
-<h3 class="mt-4">Modelos de Servicio</h3>
+<h3 class="mt-4">5.2 Modelos de Servicio</h3>
 
 <table class="table table-bordered table-striped">
 <thead class="table-dark">
@@ -51,57 +53,52 @@ La computación en la nube es un modelo de prestación de servicios tecnológico
 <tbody>
 <tr>
 <td>IaaS</td>
-<td>Infraestructura como servicio. Proporciona servidores virtuales y redes.</td>
+<td>Infraestructura como servicio.</td>
 <td>AWS EC2</td>
 </tr>
 <tr>
 <td>PaaS</td>
-<td>Plataforma como servicio. Permite desarrollar y desplegar aplicaciones.</td>
-<td>Heroku, Azure App Service</td>
+<td>Plataforma como servicio.</td>
+<td>Azure App Service</td>
 </tr>
 <tr>
 <td>SaaS</td>
-<td>Software como servicio. Aplicaciones listas para usar.</td>
+<td>Software como servicio.</td>
 <td>Google Workspace</td>
 </tr>
 </tbody>
 </table>
 
-<h3 class="mt-4">Modelos de Despliegue</h3>
-<ul>
-<li><strong>Nube pública:</strong> Recursos compartidos vía Internet.</li>
-<li><strong>Nube privada:</strong> Infraestructura exclusiva para una organización.</li>
-<li><strong>Nube híbrida:</strong> Combinación de pública y privada.</li>
-</ul>
-
-<h3 class="mt-4">Principales Proveedores</h3>
-<ul>
-<li>Amazon Web Services (AWS)</li>
-<li>Microsoft Azure</li>
-<li>Google Cloud Platform</li>
-</ul>
-
-<h3 class="mt-4">Ventajas del Desarrollo en la Nube</h3>
-<ul>
-<li>Escalabilidad automática</li>
-<li>Alta disponibilidad</li>
-<li>Reducción de costos iniciales</li>
-<li>Despliegue continuo</li>
-<li>Integración con contenedores y microservicios</li>
-</ul>
-
-<h3 class="mt-4">Relación con APIs y Microservicios</h3>
+<h3 class="mt-4">5.3 Escalabilidad</h3>
 <p>
-Las APIs desarrolladas bajo arquitectura REST pueden desplegarse en entornos cloud para garantizar disponibilidad global. Asimismo, los microservicios se ejecutan comúnmente dentro de contenedores Docker orquestados con Kubernetes en plataformas de nube pública.
+La nube permite escalabilidad horizontal y vertical según la demanda del sistema.
+</p>
+
+<h3 class="mt-4">5.4 Alta Disponibilidad</h3>
+<p>
+Los proveedores de nube garantizan disponibilidad mediante replicación y balanceo de carga.
+</p>
+
+<h3 class="mt-4">5.5 Ventajas del Desarrollo en la Nube</h3>
+<ul>
+<li>Reducción de costos iniciales</li>
+<li>Escalabilidad automática</li>
+<li>Acceso global</li>
+<li>Seguridad avanzada</li>
+</ul>
+
+<h3 class="mt-4">5.6 Relación con APIs y Microservicios</h3>
+<p>
+Las APIs y microservicios suelen desplegarse en la nube para garantizar disponibilidad y escalabilidad global.
 </p>
 
 </section>
+</main>
 
 <footer class="bg-dark text-white text-center p-3">
 © 2026 - Desarrollo Web
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
