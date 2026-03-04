@@ -32,7 +32,7 @@ letter-spacing: 1px;
 
 
 .hero {
-height: 100vh;
+height: 450px;
 background: linear-gradient(135deg, #343a40, #212529);
 display: flex;
 align-items: center;
